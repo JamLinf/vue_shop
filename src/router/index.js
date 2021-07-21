@@ -7,7 +7,6 @@ Vue.use(VueRouter)
 const router = new VueRouter({
   routes: [
     {
-      // 123
       // app.vue中的router-view默认承载 path:'/'，我们这里是将其重定向到了login，要不然就是一片空白，当然也可以直接不管'/login'路径与Login组件的一致性。如果给'/'赋予组件，app.vue作为入口就会直接加载这个组件。
       path: '/',
       redirect: '/login'
