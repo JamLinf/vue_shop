@@ -2,11 +2,12 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Login from '../components/Login.vue'
 import Home from '../components/Home.vue'
-// import { Message } from 'element-ui'
+import Welcome from '../components/Welcome.vue'
 Vue.use(VueRouter)
 const router = new VueRouter({
   routes: [
     {
+      // app.vue中的router-view默认承载 path:'/'，我们这里是将其重定向到了login，要不然就是一片空白，当然也可以直接不管'/login'路径与Login组件的一致性。如果给'/'赋予组件，app.vue作为入口就会直接加载这个组件。
       path: '/',
       redirect: '/login'
     }, {
@@ -14,7 +15,14 @@ const router = new VueRouter({
       component: Login
     }, {
       path: '/home',
-      component: Home
+      component: Home,
+      redirect: '/welcome',
+      children: [
+        {
+          path: '/welcome',
+          component: Welcome
+        }
+      ]
     }
   ]
 })

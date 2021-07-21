@@ -6,18 +6,53 @@
   "description": "",
   "glyphs": [
     {
-      "icon_id": "778509",
+      "icon_id": "82168855",
+      "name": "用户名",
+      "font_class": "yonghuming",
+      "unicode": "e63c",
+      "unicode_decimal": 58940
+    },
+    {
+      "icon_id": "82168856",
       "name": "密码",
       "font_class": "mima",
       "unicode": "e622",
       "unicode_decimal": 58914
     },
     {
-      "icon_id": "1758586",
-      "name": "用户名",
-      "font_class": "yonghuming",
-      "unicode": "e65a",
-      "unicode_decimal": 58970
+      "icon_id": "82168873",
+      "name": "用户",
+      "font_class": "yonghu",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
+      "icon_id": "82168874",
+      "name": "28体积、空间-线性",
+      "font_class": "tijikongjian-xianxing",
+      "unicode": "e89f",
+      "unicode_decimal": 59551
+    },
+    {
+      "icon_id": "82168875",
+      "name": "报表",
+      "font_class": "baobiao",
+      "unicode": "e67c",
+      "unicode_decimal": 59004
+    },
+    {
+      "icon_id": "82168876",
+      "name": "商品",
+      "font_class": "shangpin",
+      "unicode": "e616",
+      "unicode_decimal": 58902
+    },
+    {
+      "icon_id": "82168877",
+      "name": "单据",
+      "font_class": "changyongtubiao-fuben-65",
+      "unicode": "e610",
+      "unicode_decimal": 58896
     }
   ]
 }

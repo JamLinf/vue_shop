@@ -1,6 +1,6 @@
 @font-face {
   font-family: "iconfont"; /* Project id  */
-  src: url('iconfont.ttf?t=1626676871984') format('truetype');
+  src: url('iconfont.ttf?t=1626871755126') format('truetype');
 }
 
 .iconfont {
@@ -11,11 +11,31 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-yonghuming:before {
+  content: "\e63c";
+}
+
 .icon-mima:before {
   content: "\e622";
 }
 
-.icon-yonghuming:before {
-  content: "\e65a";
+.icon-yonghu:before {
+  content: "\e603";
+}
+
+.icon-tijikongjian-xianxing:before {
+  content: "\e89f";
+}
+
+.icon-baobiao:before {
+  content: "\e67c";
+}
+
+.icon-shangpin:before {
+  content: "\e616";
+}
+
+.icon-changyongtubiao-fuben-65:before {
+  content: "\e610";
 }
 

@@ -47,7 +47,7 @@ export default {
       // 这是登录表单的数据对象
       loginForm: {
         username: 'admin',
-        password: 'admin'
+        password: '123456'
       },
       // 表单的验证规则对象
       rules: {
@@ -71,7 +71,6 @@ export default {
   methods: {
     // 点击重置Form表单
     resetLoginForm () {
-      console.log(this.$refs.loginFormRef) // 在这里打印this，就能看到属性中$refs="loginFormRef"，所以我们可以使用这个方法获得el-form的JS对象
       this.$refs.loginFormRef.resetFields()
     },
     login () {
@@ -89,28 +88,25 @@ export default {
         if (!valid) return
         // { data: res }属于解构语法，提出Promise对象中的data属性，命名为res.
         const { data: res } = await this.$http.post(
-          '/user/login',
+          '/login',
           this.loginForm
         )
-        if (res.code !== 200) {
+        if (res.meta.status !== 200) {
           // 下边的写法就是立即执行函数，函数中(function(){})(参数1，参数2), 将函数用括号囊括起来，在最后加上参数()，该函数就能立即执行。
           // 注意函数中的this指向。普通函数，谁调用this就指向谁。 匿名函数是指向window对象，就找不到挂载在Vue对象上的message属性。
           // return (function () { // 如果只有一个简单的操作就直接return 表达式; 就可以立即执行。 表达式可以是console.log 也可以是1+5 等等.
           //   this.$message.error('登录失败')
           // })()
-          console.log(res.code)
-          return this.$message.error('登录失败')
+          console.log(res.meta.status)
+          this.$message.error('登录失败')
         } else {
           window.sessionStorage.setItem('token', res.data.token) // sessionStorage--会话存储，顾名思义保存时间直至会话结束，符合token的使用特点。
           this.$router.push('/home')
-          return this.$message.success('登录成功')
+          this.$message.success('登录成功')
         }
       })
     }
-  }, // methods :
-  mounted: function () {
-    this.getList()
-  }
+  } // methods :
 }
 </script>
 
